@@ -18,4 +18,8 @@ class TaskViewModel(
         }
     }
 
+    fun removeTask(task: Task) {
+        repository.removeTask(task)
+    }
+
 }
