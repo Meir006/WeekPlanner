@@ -15,6 +15,10 @@ class TaskRepository {
         nextId++
         _tasks.value = _tasks.value + task
     }
+
+    fun removeTask(task: Task) {
+        _tasks.value = _tasks.value - task;
+    }
 }
 
 
