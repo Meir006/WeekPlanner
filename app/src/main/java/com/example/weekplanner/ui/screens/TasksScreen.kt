@@ -57,7 +57,7 @@ fun TasksScreen(
                 TaskItem(
                     task = task,
                     onDelete = { viewModel.removeTask(task) },
-                    onToggle = { viewModel.completedToggle(task) },
+                    onToggle = { viewModel.completedToggle(task) }
                 )
             }
         }

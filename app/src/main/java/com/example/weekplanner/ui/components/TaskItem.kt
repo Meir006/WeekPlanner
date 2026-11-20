@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Card
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -21,7 +22,8 @@ import com.example.weekplanner.data.Task
 fun TaskItem(
     task: Task,
     onDelete: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onToggle: () -> Unit
 ) {
     Card(
         modifier = modifier.fillMaxWidth()
@@ -33,6 +35,8 @@ fun TaskItem(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
+            Checkbox(checked = task.isCompleted,
+                onCheckedChange = {onToggle()})
             Text(
                 text = task.name,
                 style = MaterialTheme.typography.bodyLarge,
@@ -44,6 +48,7 @@ fun TaskItem(
                     contentDescription = "Delete task"
                 )
             }
-        }
+
+            }
     }
 }
