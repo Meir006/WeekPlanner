@@ -56,7 +56,8 @@ fun TasksScreen(
             items(allTasks.filter { it.dayIndex == dayIndex }) { task ->
                 TaskItem(
                     task = task,
-                    onDelete = { viewModel.removeTask(task) }
+                    onDelete = { viewModel.removeTask(task) },
+                    onToggle = { viewModel.completedToggle(task) },
                 )
             }
         }
