@@ -15,7 +15,6 @@ import com.example.weekplanner.ui.components.DayItem
 fun DaysScreen(onDayClick: (Int) -> Unit) {
     Column(
         modifier = Modifier
-            .statusBarsPadding()
             .padding(16.dp)
     ) {
         Text(

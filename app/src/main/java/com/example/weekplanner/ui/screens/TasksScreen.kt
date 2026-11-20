@@ -32,11 +32,10 @@ fun TasksScreen(
 
     Column(
         modifier = Modifier
-            .statusBarsPadding()
             .padding(16.dp)
     ) {
         TextButton(onClick = onBack) {
-            Text("← Back")
+            Text("Back")
         }
 
         Text(weekDays[dayIndex])

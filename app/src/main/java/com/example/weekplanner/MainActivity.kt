@@ -39,8 +39,8 @@ class MainActivity : ComponentActivity() {
                         arguments = listOf(
                             navArgument("dayIndex") { type = NavType.IntType }
                         )
-                    ) { backStackEntry ->
-                        val dayIndex = backStackEntry.arguments?.getInt("dayIndex") ?: 0
+                    ) { taskElement ->
+                        val dayIndex = taskElement.arguments?.getInt("dayIndex")?:0
                         TasksScreen(
                             dayIndex = dayIndex,
                             viewModel = viewModel,

@@ -19,6 +19,16 @@ class TaskRepository {
     fun removeTask(task: Task) {
         _tasks.value = _tasks.value - task;
     }
+
+    fun completedToggle(task: Task) {
+        _tasks.value = _tasks.value.map {
+            if (it.id == task.id) {
+                it.copy(isCompleted = !it.isCompleted)
+            } else {
+                it
+            }
+        }
+    }
 }
 
 
