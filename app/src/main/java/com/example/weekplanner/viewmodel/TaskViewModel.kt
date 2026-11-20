@@ -22,4 +22,8 @@ class TaskViewModel(
         repository.removeTask(task)
     }
 
+    fun completedToggle(task: Task) {
+        repository.completedToggle(task)
+    }
+
 }
